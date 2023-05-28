@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About_Me</title>
+    <link rel="stylesheet" href="about_me.css">
+    
+</head>
+
+<body>
+    <h1>Tentang Saya</h1>
+    <div class="container">
+        <img src="kitting.jpg" alt="Kitting" class="gambar-kecil">
+    </div>
+    
+
+    <script>
+        // Mengambil parameter yang dikirim dari halaman sebelumnya
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get('nama');
+        const usia = params.get('usia');
+        const jk = params.get('jk');
+        const alamat = params.get('alamat');
+        const hobi = params.get('hobi');
+
+         
+
+        // Menampilkan data pada halaman "Tentang Diri"
+        document.write("<p>Halo, nama saya " + nama + ", usia saya " + usia + " tahun. Saya seorang " + jk + " yang tinggal di " + alamat + ". Salah satu hobi saya adalah " + hobi + ".</p>");
+    </script>
+
+    <button class="next"><a href="hobi.html">Hobby</button>
+
+    <button class="back"><a href="index.html">Home</a></button>
+</body>
+
+</html>
